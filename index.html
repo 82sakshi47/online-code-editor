@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Online Code Editor</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="bar">
+    <h1>Code Editor</h1>
+    <div class="actions">
+      <button id="layoutBtn" type="button">Switch layout</button>
+      <button id="downloadBtn" type="button">Download</button>
+      <button id="resetBtn" type="button">Reset</button>
+    </div>
+  </header>
+
+  <main id="workspace" class="workspace">
+    <section class="editors">
+      <div class="tabs" role="tablist">
+        <button class="tab active" data-lang="html" role="tab">HTML</button>
+        <button class="tab" data-lang="css" role="tab">CSS</button>
+        <button class="tab" data-lang="js" role="tab">JavaScript</button>
+      </div>
+      <textarea id="html" class="editor active" spellcheck="false" aria-label="HTML code"></textarea>
+      <textarea id="css" class="editor" spellcheck="false" aria-label="CSS code"></textarea>
+      <textarea id="js" class="editor" spellcheck="false" aria-label="JavaScript code"></textarea>
+    </section>
+
+    <section class="output">
+      <iframe id="preview" title="Live preview" sandbox="allow-scripts allow-modals"></iframe>
+      <div class="console">
+        <div class="console-head">
+          <span>Console</span>
+          <button id="clearConsole" type="button">Clear</button>
+        </div>
+        <pre id="consoleOut" aria-live="polite"></pre>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
